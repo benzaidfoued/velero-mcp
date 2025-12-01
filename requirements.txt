@@ -1,0 +1,4 @@
+mcp>=1.8.1
+kubernetes>=30.0.0
+pydantic>=2.8.0
+python-dotenv>=1.0.1
