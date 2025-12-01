@@ -1,3 +1,26 @@
 [project]
-name='velero-mcp-server'
-version='0.1.0'
+name = "velero-mcp-server"
+version = "0.1.0"
+description = "Model Context Protocol (MCP) server exposing Velero backup & schedule tools."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "mcp>=1.8.1",
+  "kubernetes>=30.0.0",
+  "pydantic>=2.8.0",
+  "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6.0",
+  "mypy>=1.10.0",
+  "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["velero_mcp_server"]
